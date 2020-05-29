@@ -1,0 +1,70 @@
+Tetris notes
+Must do:
+- grid based game
+- five shapes
+- high score by filling rows,
+- dispearing row to get points
+- Grid to the side of the grid to show the next shape
+
+
+Setting up the project
+- Decide on a code editor. Atom, intelliJ, webstorm
+- index.html
+- style.css
+- app.js
+
+
+HTML Basics
+- Add script tag JS file to HTMML
+- Add Link tag css file to HTML
+- Make grid 20 blocks high, 10 blocks wide. (Could use for loop to do this). .grid
+- Display score, #score
+- start button to start the game #start-button
+
+CSS basics
+ - Assign grid dimension. 
+ - .grid div will be used to reference only the divs in the grid class
+ - use flex box to wrap within grid
+ - color the tetromino shapes. 
+
+App.js
+- Remember let ,const and var
+- Dom event listener for index.html link
+- Tell the JS the width of squares, const can come in handy
+- grid variable querySelector can be used to find the grid class. assign it to a variable. 
+- square variables have a square array and store all the divs in an array.
+- Score variable
+- start-button variable
+- draw the shapes using classList.add()
+- lShape - an array with width [1, width+1,width*2+1,2] 
+- Draw function to shape.
+- Undraw function to remove the shape. 
+- Add a timerId
+- moveShape function to undraw the shape adjust the current position and redraw it to have it move downwards. 
+- freeze function to if statement to check if one of the squares contains taken, each square in shape will be taken, once it is taken it will create a new shape and begin again.
+- write a set of rules to stop it from moving through the sides 
+
+--------------------
+Notes while writing
+- ltetrimino
+1. o++ 2. ooo 3. o+o 4. ooo
+   o+o    +++    o+o    +oo
+   o+o    oo+    ++o    +++
+
+
+
+
+- ztetrimino
+1. ooo 2. +oo 3. ooo 4. +oo
+   o++    ++o    o++    ++o
+   ++o    o+o    ++o    o+o
+
+-otetrimino
+1. ++o  2. ooo 3. ooo 4. ooo  
+   ++o	   ooo    ooo    ooo 
+   ooo     ooo    ooo    ooo 
+
+- itetrimino
+1. o+o  2. ooo
+   o+o     +++
+   o+o     ooo

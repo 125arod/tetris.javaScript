@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*Bugs and improvements
 
 -space to instantly drop the tetrimino
@@ -12,14 +13,19 @@
 
 */
 
+=======
+>>>>>>> origin/Master
 document.addEventListener('DOMContentLoaded', () => {
 	const grid = document.querySelector('.grid');
 	let squares = Array.from(document.querySelectorAll('.grid div'));
 	const scoreDisplay = document.querySelector('#score');
 	const startBtn = document.querySelector('#start-button');
 	const width = 10;
+<<<<<<< HEAD
 	let nextRandom = 0;
 	let timerId;
+=======
+>>>>>>> origin/Master
 	
 	//Tetriminos arrays
 	const lTetrimino = [
@@ -56,6 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	let random = Math.floor(Math.random()*theTetriminos.length);
 	let current = theTetriminos[random][currentRotation];
 
+<<<<<<< HEAD
 
 //Keycodes and its movements. 
 	function control (e){
@@ -72,6 +79,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	}
 	document.addEventListener('keyup', control)
+=======
+>>>>>>> origin/Master
 //Function: Draw will be used to randomly select a tetrimino shape
 	function draw() {
 		current.forEach( index =>{
@@ -85,7 +94,11 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 
+<<<<<<< HEAD
 	
+=======
+	timerId = setInterval(moveDown, 500) //1000 (ms) = 1 second
+>>>>>>> origin/Master
 	function moveDown(){
 		undraw();
 		currentPosition += width;
@@ -97,6 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		if(current.some(index => squares[currentPosition + index + width].classList.contains('taken'))) {
 			current.forEach(index => squares[currentPosition + index].classList.add('taken'));
 			//start a new tetrimino to fall after stopping the next
+<<<<<<< HEAD
 			random = nextRandom
 			nextRandom = Math.floor(Math.random()* theTetriminos.length);
 			current = theTetriminos[random][currentRotation];
@@ -177,5 +191,13 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	})
 //Stopped here: 1:17:03
+=======
+			random = Math.floor(Math.random()* theTetriminos.length);
+			current = theTetriminos[random][currentRotation];
+			currentPosition = 4;
+			draw();
+		}
+	}
+>>>>>>> origin/Master
 });
 	

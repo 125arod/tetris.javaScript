@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 .container{
 	display:flex;
 }
 
-=======
->>>>>>> origin/Master
+
 .grid {
 	width: 200px;
 	height: 400px;
@@ -36,6 +34,4 @@
 .mini-grid div {
 	width:20px;
 	height: 20px;
-=======
->>>>>>> origin/Master
 }
